@@ -1,0 +1,88 @@
+<mxfile>
+  <diagram id="medisage-bottom-up" name="MediSage Bottom-Up Design">
+    <mxGraphModel dx="1600" dy="1000" grid="1" gridSize="10" guides="1" tooltips="0" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="edge-sub5-merge" edge="1" parent="1" source="sub5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2F6690;strokeWidth=1;endArrow=block;" target="level4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-sub1-merge" edge="1" parent="1" source="sub1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2F6690;strokeWidth=1;endArrow=block;" target="level4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-scope" edge="1" parent="1" source="level2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#D99A2B;strokeWidth=2;endArrow=block;" target="level3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-objects" edge="1" parent="1" source="level1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#B84A62;strokeWidth=2;endArrow=block;" target="level2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="scope" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3D6;strokeColor=#D99A2B;fontColor=#5D430E;fontSize=14;arcSize=10;" value="For every object: data model + UI view + API operation + validation + security + offline behavior + provenance/source link" vertex="1">
+          <mxGeometry height="65" width="1000" x="300" y="835" as="geometry" />
+        </mxCell>
+        <mxCell id="title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=24;fontStyle=1;fontColor=#17324D;align=center;verticalAlign=middle;" value="MediSage Clinical Document Intelligence and Sovereign Health Vault" vertex="1">
+          <mxGeometry height="50" width="1200" x="200" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=14;fontColor=#52606D;align=center;verticalAlign=middle;" value="Bottom-up development: identify objects, define scope, develop components, merge subsystems, assemble the system" vertex="1">
+          <mxGeometry height="30" width="1200" x="200" y="78" as="geometry" />
+        </mxCell>
+        <mxCell id="level5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#17324D;strokeColor=#10253A;fontColor=#FFFFFF;fontSize=18;fontStyle=1;arcSize=12;" value="5. COMPLETE SYSTEM" vertex="1">
+          <mxGeometry height="70" width="600" x="500" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="system" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F1F8;strokeColor=#17324D;fontColor=#17324D;fontSize=16;fontStyle=1;arcSize=10;" value="MediSage&lt;br&gt;&lt;font style=&quot;font-size:13px&quot;&gt;Patient-controlled, traceable health-record platform&lt;/font&gt;" vertex="1">
+          <mxGeometry height="70" width="600" x="500" y="225" as="geometry" />
+        </mxCell>
+        <mxCell id="level4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2F6690;strokeColor=#234E70;fontColor=#FFFFFF;fontSize=18;fontStyle=1;arcSize=12;" value="4. MERGE SUBSYSTEMS" vertex="1">
+          <mxGeometry height="55" width="600" x="500" y="335" as="geometry" />
+        </mxCell>
+        <mxCell id="sub1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DCECF7;strokeColor=#2F6690;fontColor=#17324D;fontSize=14;arcSize=10;" value="Document Intelligence&lt;br&gt;&lt;font style=&quot;font-size:12px&quot;&gt;OCR, extraction, provenance, biomarker trends&lt;/font&gt;" vertex="1">
+          <mxGeometry height="75" width="270" x="80" y="415" as="geometry" />
+        </mxCell>
+        <mxCell id="sub2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DCECF7;strokeColor=#2F6690;fontColor=#17324D;fontSize=14;arcSize=10;" value="Safety Guard&lt;br&gt;&lt;font style=&quot;font-size:12px&quot;&gt;Drug interactions, allergies, renal risks&lt;/font&gt;" vertex="1">
+          <mxGeometry height="75" width="270" x="390" y="415" as="geometry" />
+        </mxCell>
+        <mxCell id="sub3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DCECF7;strokeColor=#2F6690;fontColor=#17324D;fontSize=14;arcSize=10;" value="Patient &amp; Family Vault&lt;br&gt;&lt;font style=&quot;font-size:12px&quot;&gt;Profiles, timeline, access control&lt;/font&gt;" vertex="1">
+          <mxGeometry height="75" width="270" x="700" y="415" as="geometry" />
+        </mxCell>
+        <mxCell id="sub4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DCECF7;strokeColor=#2F6690;fontColor=#17324D;fontSize=14;arcSize=10;" value="Interoperability &amp; Emergency&lt;br&gt;&lt;font style=&quot;font-size:12px&quot;&gt;FHIR export, QR I.C.E. pass, offline cache&lt;/font&gt;" vertex="1">
+          <mxGeometry height="75" width="270" x="1010" y="415" as="geometry" />
+        </mxCell>
+        <mxCell id="sub5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DCECF7;strokeColor=#2F6690;fontColor=#17324D;fontSize=14;arcSize=10;" value="AI &amp; Insurance Services&lt;br&gt;&lt;font style=&quot;font-size:12px&quot;&gt;Health synthesis, chat, coverage matching&lt;/font&gt;" vertex="1">
+          <mxGeometry height="75" width="220" x="1320" y="415" as="geometry" />
+        </mxCell>
+        <mxCell id="level3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4C956C;strokeColor=#397A55;fontColor=#FFFFFF;fontSize=18;fontStyle=1;arcSize=12;" value="3. DEVELOP THE IMPLEMENTATION STACK" vertex="1">
+          <mxGeometry height="55" width="600" x="500" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="stack" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6F4EC;strokeColor=#4C956C;fontColor=#183B29;fontSize=14;arcSize=10;" value="React 19 + Vite + Tailwind&lt;br&gt;Node.js + Express REST API&lt;br&gt;MongoDB + encrypted file storage&lt;br&gt;IndexedDB/localStorage offline layer&lt;br&gt;Rules + optional OpenAI/LangChain" vertex="1">
+          <mxGeometry height="105" width="740" x="430" y="610" as="geometry" />
+        </mxCell>
+        <mxCell id="level2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D99A2B;strokeColor=#B77D15;fontColor=#FFFFFF;fontSize=18;fontStyle=1;arcSize=12;" value="2. DEFINE DEVELOPMENT SCOPE FOR EACH OBJECT" vertex="1">
+          <mxGeometry height="55" width="600" x="500" y="755" as="geometry" />
+        </mxCell>
+        <mxCell id="level1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#B84A62;strokeColor=#92354B;fontColor=#FFFFFF;fontSize=18;fontStyle=1;arcSize=12;" value="1. IDENTIFY THE SMALL OBJECTS" vertex="1">
+          <mxGeometry height="55" width="600" x="500" y="940" as="geometry" />
+        </mxCell>
+        <mxCell id="objects" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F9E5EA;strokeColor=#B84A62;fontColor=#5B1E2D;fontSize=14;arcSize=10;" value="Patient profile | Family member | Clinical document | Extracted value | Source location | Biomarker result | Medication | Allergy | Safety alert | Emergency contact | QR pass | FHIR resource | Chat message | Insurance plan" vertex="1">
+          <mxGeometry height="75" width="1280" x="160" y="1020" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-system" edge="1" parent="1" source="system" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#17324D;strokeWidth=2;endArrow=block;" target="level5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-subsystems" edge="1" parent="1" source="level4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2F6690;strokeWidth=2;endArrow=block;" target="system">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-sub2-merge" edge="1" parent="1" source="sub2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2F6690;strokeWidth=1;endArrow=block;" target="level4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-sub3-merge" edge="1" parent="1" source="sub3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2F6690;strokeWidth=1;endArrow=block;" target="level4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-sub4-merge" edge="1" parent="1" source="sub4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2F6690;strokeWidth=1;endArrow=block;" target="level4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-stack" edge="1" parent="1" source="level3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#4C956C;strokeWidth=2;endArrow=block;" target="level4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

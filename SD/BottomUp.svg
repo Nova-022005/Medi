@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1150" viewBox="0 0 1600 1150">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#52606D"/>
+    </marker>
+    <style>
+      .title { font: 700 24px Arial, sans-serif; fill: #17324D; }
+      .subtitle { font: 14px Arial, sans-serif; fill: #52606D; }
+      .heading { font: 700 18px Arial, sans-serif; fill: white; }
+      .label { font: 700 16px Arial, sans-serif; fill: #17324D; }
+      .body { font: 13px Arial, sans-serif; fill: #17324D; }
+      .small { font: 12px Arial, sans-serif; fill: #17324D; }
+      .arrow { fill: none; stroke: #52606D; stroke-width: 2; marker-end: url(#arrow); }
+    </style>
+  </defs>
+  <rect width="1600" height="1150" fill="white"/>
+  <text x="800" y="38" text-anchor="middle" class="title">MediSage Clinical Document Intelligence and Sovereign Health Vault</text>
+  <text x="800" y="68" text-anchor="middle" class="subtitle">Bottom-up development: identify objects, define scope, develop components, merge subsystems, assemble the system</text>
+
+  <!-- Arrows are intentionally drawn before the boxes so they remain behind the diagram. -->
+  <path class="arrow" d="M800 225 V210"/>
+  <path class="arrow" d="M800 335 V295"/>
+  <path class="arrow" d="M800 530 V390"/>
+  <path class="arrow" d="M800 755 V715"/>
+  <path class="arrow" d="M800 940 V900"/>
+  <path class="arrow" d="M215 415 V390 H800"/>
+  <path class="arrow" d="M525 415 V390"/>
+  <path class="arrow" d="M835 415 V390"/>
+  <path class="arrow" d="M1145 415 V390"/>
+  <path class="arrow" d="M1430 415 V390 H800"/>
+
+  <rect x="500" y="140" width="600" height="70" rx="12" fill="#17324D" stroke="#10253A"/>
+  <text x="800" y="183" text-anchor="middle" class="heading">5. COMPLETE SYSTEM</text>
+  <rect x="500" y="225" width="600" height="70" rx="10" fill="#E8F1F8" stroke="#17324D" stroke-width="2"/>
+  <text x="800" y="253" text-anchor="middle" class="label">MediSage</text>
+  <text x="800" y="276" text-anchor="middle" class="small">Patient-controlled, traceable health-record platform</text>
+
+  <rect x="500" y="335" width="600" height="55" rx="12" fill="#2F6690" stroke="#234E70"/>
+  <text x="800" y="369" text-anchor="middle" class="heading">4. MERGE SUBSYSTEMS</text>
+  <g fill="#DCECF7" stroke="#2F6690">
+    <rect x="80" y="415" width="270" height="75" rx="10"/>
+    <rect x="390" y="415" width="270" height="75" rx="10"/>
+    <rect x="700" y="415" width="270" height="75" rx="10"/>
+    <rect x="1010" y="415" width="270" height="75" rx="10"/>
+    <rect x="1320" y="415" width="220" height="75" rx="10"/>
+  </g>
+  <text x="215" y="444" text-anchor="middle" class="label">Document Intelligence</text>
+  <text x="215" y="466" text-anchor="middle" class="small">OCR, extraction, provenance,</text><text x="215" y="481" text-anchor="middle" class="small">biomarker trends</text>
+  <text x="525" y="444" text-anchor="middle" class="label">Safety Guard</text>
+  <text x="525" y="466" text-anchor="middle" class="small">Drug interactions, allergies,</text><text x="525" y="481" text-anchor="middle" class="small">renal risks</text>
+  <text x="835" y="444" text-anchor="middle" class="label">Patient &amp; Family Vault</text>
+  <text x="835" y="466" text-anchor="middle" class="small">Profiles, timeline, access control</text>
+  <text x="1145" y="444" text-anchor="middle" class="label">Interoperability &amp; Emergency</text>
+  <text x="1145" y="466" text-anchor="middle" class="small">FHIR export, QR I.C.E. pass,</text><text x="1145" y="481" text-anchor="middle" class="small">offline cache</text>
+  <text x="1430" y="444" text-anchor="middle" class="label">AI &amp; Insurance Services</text>
+  <text x="1430" y="466" text-anchor="middle" class="small">Health synthesis, chat,</text><text x="1430" y="481" text-anchor="middle" class="small">coverage matching</text>
+
+  <rect x="500" y="530" width="600" height="55" rx="12" fill="#4C956C" stroke="#397A55"/>
+  <text x="800" y="564" text-anchor="middle" class="heading">3. DEVELOP THE IMPLEMENTATION STACK</text>
+  <rect x="430" y="610" width="740" height="105" rx="10" fill="#E6F4EC" stroke="#4C956C" stroke-width="2"/>
+  <text x="800" y="635" text-anchor="middle" class="body">React 19 + Vite + Tailwind</text>
+  <text x="800" y="655" text-anchor="middle" class="body">Node.js + Express REST API</text>
+  <text x="800" y="675" text-anchor="middle" class="body">MongoDB + encrypted file storage</text>
+  <text x="800" y="695" text-anchor="middle" class="body">IndexedDB/localStorage offline layer</text>
+  <text x="800" y="712" text-anchor="middle" class="body">Rules + optional OpenAI/LangChain</text>
+
+  <rect x="500" y="755" width="600" height="55" rx="12" fill="#D99A2B" stroke="#B77D15"/>
+  <text x="800" y="789" text-anchor="middle" class="heading">2. DEFINE DEVELOPMENT SCOPE FOR EACH OBJECT</text>
+  <rect x="300" y="835" width="1000" height="65" rx="10" fill="#FFF3D6" stroke="#D99A2B" stroke-width="2"/>
+  <text x="800" y="862" text-anchor="middle" class="body">For every object: data model + UI view + API operation + validation + security</text>
+  <text x="800" y="883" text-anchor="middle" class="body">+ offline behavior + provenance/source link</text>
+
+  <rect x="500" y="940" width="600" height="55" rx="12" fill="#B84A62" stroke="#92354B"/>
+  <text x="800" y="974" text-anchor="middle" class="heading">1. IDENTIFY THE SMALL OBJECTS</text>
+  <rect x="160" y="1020" width="1280" height="75" rx="10" fill="#F9E5EA" stroke="#B84A62" stroke-width="2"/>
+  <text x="800" y="1050" text-anchor="middle" class="body">Patient profile | Family member | Clinical document | Extracted value | Source location | Biomarker result</text>
+  <text x="800" y="1072" text-anchor="middle" class="body">Medication | Allergy | Safety alert | Emergency contact | QR pass | FHIR resource | Chat message | Insurance plan</text>
+</svg>
