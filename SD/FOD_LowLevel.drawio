@@ -1,0 +1,95 @@
+<mxfile host="app.diagrams.net" modified="2026-10-08T15:16:00.000Z" agent="MediSage" version="24.7.17">
+  <diagram id="fod-low-level" name="MediSage Top-Down FOD - Low Level">
+    <mxGraphModel dx="1800" dy="1400" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="1400" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <mxCell id="title" value="MediSage Top-Down Flow of Data (FOD)" style="text;html=1;strokeColor=none;fillColor=none;fontSize=26;fontStyle=1;fontColor=#17324D;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="300" y="20" width="1200" height="45" as="geometry"/>
+        </mxCell>
+        <mxCell id="subtitle" value="Low-level decomposition: system boundary → access → API control → clinical processes → controlled data stores" style="text;html=1;strokeColor=none;fillColor=none;fontSize=14;fontColor=#52606D;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="250" y="65" width="1300" height="30" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="system" value="MediSage&lt;br&gt;&lt;font style=&quot;font-size:13px&quot;&gt;Patient-controlled clinical document intelligence and sovereign health vault&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#17324D;strokeColor=#10253A;fontColor=#FFFFFF;fontSize=19;fontStyle=1;arcSize=12;" vertex="1" parent="1">
+          <mxGeometry x="560" y="115" width="680" height="75" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="actors" value="External actors and services&lt;br&gt;&lt;font style=&quot;font-size:12px&quot;&gt;Patient / caregiver • clinician • emergency responder • insurance provider • terminology services • optional AI&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F1F8;strokeColor=#17324D;fontColor=#17324D;fontSize=15;fontStyle=1;arcSize=10;" vertex="1" parent="1">
+          <mxGeometry x="390" y="230" width="1020" height="70" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="client" value="1. Client and access boundary&lt;br&gt;&lt;font style=&quot;font-size:12px&quot;&gt;React timeline • upload • safety view • FHIR export • offline emergency pass&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DCECF7;strokeColor=#2F6690;fontColor=#17324D;fontSize=16;fontStyle=1;arcSize=10;" vertex="1" parent="1">
+          <mxGeometry x="390" y="350" width="1020" height="70" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="api" value="2. REST API and control processes&lt;br&gt;&lt;font style=&quot;font-size:12px&quot;&gt;Authenticate and authorize • resolve active profile • validate upload • serve profile-scoped reads and requests&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6F4EC;strokeColor=#4C956C;fontColor=#183B29;fontSize=16;fontStyle=1;arcSize=10;" vertex="1" parent="1">
+          <mxGeometry x="390" y="470" width="1020" height="70" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="processBand" value="3. LOW-LEVEL CLINICAL PROCESSES" style="swimlane;html=1;rounded=1;horizontal=1;startSize=30;fillColor=#F1E6F8;strokeColor=#805AA5;fontColor=#3C2554;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="590" width="1640" height="300" as="geometry"/>
+        </mxCell>
+        <mxCell id="ingest" value="3.1 Ingest and extract&lt;br&gt;&lt;font style=&quot;font-size:11px&quot;&gt;classify → OCR → entities&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#805AA5;fontColor=#3C2554;fontSize=14;fontStyle=1;" vertex="1" parent="processBand">
+          <mxGeometry x="35" y="60" width="230" height="75" as="geometry"/>
+        </mxCell>
+        <mxCell id="provenance" value="3.2 Preserve provenance&lt;br&gt;&lt;font style=&quot;font-size:11px&quot;&gt;source coordinates • confidence • hash&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#805AA5;fontColor=#3C2554;fontSize=14;fontStyle=1;" vertex="1" parent="processBand">
+          <mxGeometry x="295" y="60" width="230" height="75" as="geometry"/>
+        </mxCell>
+        <mxCell id="trends" value="3.3 Calculate trends&lt;br&gt;&lt;font style=&quot;font-size:11px&quot;&gt;biomarkers • dates • status&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#805AA5;fontColor=#3C2554;fontSize=14;fontStyle=1;" vertex="1" parent="processBand">
+          <mxGeometry x="555" y="60" width="230" height="75" as="geometry"/>
+        </mxCell>
+        <mxCell id="safety" value="3.4 Evaluate safety&lt;br&gt;&lt;font style=&quot;font-size:11px&quot;&gt;interactions • allergies • renal risks&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#805AA5;fontColor=#3C2554;fontSize=14;fontStyle=1;" vertex="1" parent="processBand">
+          <mxGeometry x="815" y="60" width="230" height="75" as="geometry"/>
+        </mxCell>
+        <mxCell id="interoperate" value="3.5 Interoperate&lt;br&gt;&lt;font style=&quot;font-size:11px&quot;&gt;map and validate HL7 FHIR R4&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#805AA5;fontColor=#3C2554;fontSize=14;fontStyle=1;" vertex="1" parent="processBand">
+          <mxGeometry x="1075" y="60" width="230" height="75" as="geometry"/>
+        </mxCell>
+        <mxCell id="assist" value="3.6 Assist and match&lt;br&gt;&lt;font style=&quot;font-size:11px&quot;&gt;evidence summary • fallback • insurance&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#805AA5;fontColor=#3C2554;fontSize=14;fontStyle=1;" vertex="1" parent="processBand">
+          <mxGeometry x="1335" y="60" width="230" height="75" as="geometry"/>
+        </mxCell>
+        <mxCell id="processNote" value="Every clinical process receives a profile ID, enforces authorization, and returns traceable evidence or an explicit unverified state." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3D6;strokeColor=#D99A2B;fontColor=#5D430E;fontSize=12;" vertex="1" parent="processBand">
+          <mxGeometry x="300" y="175" width="1040" height="65" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="storeBand" value="4. CONTROLLED DATA STORES AND OUTPUTS" style="swimlane;html=1;rounded=1;horizontal=1;startSize=30;fillColor=#F9E5EA;strokeColor=#B84A62;fontColor=#5B1E2D;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="940" width="1640" height="260" as="geometry"/>
+        </mxCell>
+        <mxCell id="userDb" value="User and session&lt;br&gt;records" style="shape=cylinder;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#B84A62;fontColor=#5B1E2D;" vertex="1" parent="storeBand">
+          <mxGeometry x="35" y="60" width="220" height="75" as="geometry"/>
+        </mxCell>
+        <mxCell id="clinicalDb" value="Clinical records&lt;br&gt;profiles • observations • medicines" style="shape=cylinder;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#B84A62;fontColor=#5B1E2D;" vertex="1" parent="storeBand">
+          <mxGeometry x="285" y="60" width="270" height="75" as="geometry"/>
+        </mxCell>
+        <mxCell id="documentDb" value="Encrypted source&lt;br&gt;documents" style="shape=cylinder;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#B84A62;fontColor=#5B1E2D;" vertex="1" parent="storeBand">
+          <mxGeometry x="585" y="60" width="220" height="75" as="geometry"/>
+        </mxCell>
+        <mxCell id="auditDb" value="Audit and provenance&lt;br&gt;records" style="shape=cylinder;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#B84A62;fontColor=#5B1E2D;" vertex="1" parent="storeBand">
+          <mxGeometry x="835" y="60" width="220" height="75" as="geometry"/>
+        </mxCell>
+        <mxCell id="offlineDb" value="Offline emergency&lt;br&gt;cache" style="shape=cylinder;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#B84A62;fontColor=#5B1E2D;" vertex="1" parent="storeBand">
+          <mxGeometry x="1085" y="60" width="220" height="75" as="geometry"/>
+        </mxCell>
+        <mxCell id="outputs" value="Traceable timeline • safety alerts • FHIR bundle • assistant response • emergency pass" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#B84A62;fontColor=#5B1E2D;fontSize=13;fontStyle=1;" vertex="1" parent="storeBand">
+          <mxGeometry x="1335" y="60" width="270" height="75" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e1" value="system scope" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeWidth=2;strokeColor=#17324D;" edge="1" parent="1" source="system" target="actors"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e2" value="user and service input" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeWidth=2;strokeColor=#52606D;" edge="1" parent="1" source="actors" target="client"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e3" value="HTTPS request + profile ID" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeWidth=2;strokeColor=#52606D;" edge="1" parent="1" source="client" target="api"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e4" value="authorized processing request" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeWidth=2;strokeColor=#52606D;" edge="1" parent="1" source="api" target="processBand"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e5" value="source document" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#52606D;" edge="1" parent="1" source="ingest" target="documentDb"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e6" value="values + evidence" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#52606D;" edge="1" parent="1" source="provenance" target="clinicalDb"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e7" value="trends + alerts" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#52606D;" edge="1" parent="1" source="trends" target="outputs"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e8" value="safety result" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#52606D;" edge="1" parent="1" source="safety" target="outputs"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e9" value="FHIR bundle" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#52606D;" edge="1" parent="1" source="interoperate" target="outputs"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e10" value="summary / match" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#52606D;" edge="1" parent="1" source="assist" target="outputs"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e11" value="minimum emergency fields" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#52606D;" edge="1" parent="1" source="clinicalDb" target="offlineDb"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e12" value="access events" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;dashed=1;strokeColor=#805AA5;" edge="1" parent="1" source="api" target="auditDb"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e13" value="codes and rules" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;dashed=1;strokeColor=#805AA5;" edge="1" parent="1" source="actors" target="safety"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e14" value="optional prompt" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;dashed=1;strokeColor=#805AA5;" edge="1" parent="1" source="actors" target="assist"><mxGeometry relative="1" as="geometry"/></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
