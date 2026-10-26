@@ -161,6 +161,16 @@ NODE_ENV=development
 
 `OPENAI_API_KEY` is optional for heuristic-mode development. Use a production-grade secret manager and HTTPS when deploying. Never use real patient data in a development environment unless the deployment has been reviewed and secured for that purpose.
 
+### Dependency-free search example
+
+The standalone [search.js](search.js) module provides an in-memory search engine for clinical documents and can be connected to an existing input element with `attachSearchBar`. It has no external dependencies. Run its separate test and metric script with:
+
+```bash
+node search.test.js
+```
+
+The script reports error rate, defect density, execution time, and test cases per second. Its sample documents are synthetic; do not place real patient data in test files.
+
 ## Expected workflows
 
 ### Upload and verify a document

@@ -1,0 +1,171 @@
+<mxfile>
+  <diagram id="medisage-state-machine" name="MediSage UML State Diagram">
+    <mxGraphModel dx="1800" dy="1900" grid="1" gridSize="10" guides="1" tooltips="0" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="1900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="M5OtNfXvFCDyiixAFSIs-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;" value="" vertex="1">
+          <mxGeometry height="1980" width="1720" x="19" y="-115" as="geometry" />
+        </mxCell>
+        <mxCell id="title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=26;fontStyle=1;fontColor=#17324D;align=center;verticalAlign=middle;" value="MediSage UML State Diagram" vertex="1">
+          <mxGeometry height="45" width="1200" x="300" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=14;fontColor=#52606D;align=center;verticalAlign=middle;" value="Authenticated clinical-document lifecycle with traceability, safety, offline access, and interoperability" vertex="1">
+          <mxGeometry height="30" width="1300" x="250" y="65" as="geometry" />
+        </mxCell>
+        <mxCell id="initial" parent="1" style="ellipse;aspect=fixed;whiteSpace=wrap;html=1;fillColor=#17324D;strokeColor=#10253A;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="28" width="28" x="865" y="115" as="geometry" />
+        </mxCell>
+        <mxCell id="startLabel" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#52606D;align=center;verticalAlign=middle;" value="Initial pseudostate" vertex="1">
+          <mxGeometry height="25" width="180" x="790" y="145" as="geometry" />
+        </mxCell>
+        <mxCell id="unauthenticated" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F1F8;strokeColor=#2F6690;fontColor=#17324D;fontSize=16;fontStyle=1;arcSize=14;" value="Unauthenticated&lt;br&gt;&lt;font style=&quot;font-size:12px&quot;&gt;No active session&lt;/font&gt;" vertex="1">
+          <mxGeometry height="70" width="390" x="685" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="authenticated" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6F4EC;strokeColor=#4C956C;fontColor=#183B29;fontSize=16;fontStyle=1;arcSize=14;" value="Authenticated session&lt;br&gt;&lt;font style=&quot;font-size:12px&quot;&gt;JWT valid • permissions resolved&lt;/font&gt;" vertex="1">
+          <mxGeometry height="70" width="390" x="685" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="profile" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6F4EC;strokeColor=#4C956C;fontColor=#183B29;fontSize=16;fontStyle=1;arcSize=14;" value="Active profile selected&lt;br&gt;&lt;font style=&quot;font-size:12px&quot;&gt;Patient or dependent record isolated&lt;/font&gt;" vertex="1">
+          <mxGeometry height="70" width="390" x="685" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="upload" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DCECF7;strokeColor=#2F6690;fontColor=#17324D;fontSize=16;fontStyle=1;arcSize=14;" value="Document received&lt;br&gt;&lt;font style=&quot;font-size:12px&quot;&gt;PDF • image • JSON • HL7 artefact&lt;/font&gt;" vertex="1">
+          <mxGeometry height="70" width="390" x="685" y="580" as="geometry" />
+        </mxCell>
+        <mxCell id="rejected" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F9E5EA;strokeColor=#B84A62;fontColor=#5B1E2D;fontSize=16;fontStyle=1;arcSize=14;" value="Upload rejected&lt;br&gt;&lt;font style=&quot;font-size:12px&quot;&gt;Invalid type, size, malware, or profile scope&lt;/font&gt;" vertex="1">
+          <mxGeometry height="70" width="390" x="140" y="580" as="geometry" />
+        </mxCell>
+        <mxCell id="processing" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F1E6F8;strokeColor=#805AA5;fontColor=#3C2554;fontSize=16;fontStyle=1;arcSize=14;" value="Processing document&lt;br&gt;&lt;font style=&quot;font-size:12px&quot;&gt;Classify • OCR • parse • extract entities&lt;/font&gt;" vertex="1">
+          <mxGeometry height="70" width="390" x="685" y="710" as="geometry" />
+        </mxCell>
+        <mxCell id="failed" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F9E5EA;strokeColor=#B84A62;fontColor=#5B1E2D;fontSize=16;fontStyle=1;arcSize=14;" value="Processing failed&lt;br&gt;&lt;font style=&quot;font-size:12px&quot;&gt;Service, parser, or document-quality failure&lt;/font&gt;" vertex="1">
+          <mxGeometry height="70" width="390" x="140" y="710" as="geometry" />
+        </mxCell>
+        <mxCell id="review" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F1E6F8;strokeColor=#805AA5;fontColor=#3C2554;fontSize=16;fontStyle=1;arcSize=14;" value="Extraction review&lt;br&gt;&lt;font style=&quot;font-size:12px&quot;&gt;Confidence and source coordinates checked&lt;/font&gt;" vertex="1">
+          <mxGeometry height="70" width="390" x="685" y="840" as="geometry" />
+        </mxCell>
+        <mxCell id="needsVerification" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3D6;strokeColor=#D99A2B;fontColor=#5D430E;fontSize=16;fontStyle=1;arcSize=14;" value="Needs user verification&lt;br&gt;&lt;font style=&quot;font-size:12px&quot;&gt;Low confidence or missing provenance&lt;/font&gt;" vertex="1">
+          <mxGeometry height="70" width="390" x="140" y="840" as="geometry" />
+        </mxCell>
+        <mxCell id="verified" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6F4EC;strokeColor=#4C956C;fontColor=#183B29;fontSize=16;fontStyle=1;arcSize=14;" value="Verified clinical record&lt;br&gt;&lt;font style=&quot;font-size:12px&quot;&gt;Source-linked values stored for active profile&lt;/font&gt;" vertex="1">
+          <mxGeometry height="70" width="390" x="685" y="970" as="geometry" />
+        </mxCell>
+        <mxCell id="timeline" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DCECF7;strokeColor=#2F6690;fontColor=#17324D;fontSize=16;fontStyle=1;arcSize=14;" value="Timeline available&lt;br&gt;&lt;font style=&quot;font-size:12px&quot;&gt;Trends, evidence, medicines, and allergies visible&lt;/font&gt;" vertex="1">
+          <mxGeometry height="70" width="390" x="685" y="1100" as="geometry" />
+        </mxCell>
+        <mxCell id="safety" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F1E6F8;strokeColor=#805AA5;fontColor=#3C2554;fontSize=16;fontStyle=1;arcSize=14;" value="Safety evaluation&lt;br&gt;&lt;font style=&quot;font-size:12px&quot;&gt;Interactions • allergy • renal/haemodynamic rules&lt;/font&gt;" vertex="1">
+          <mxGeometry height="70" width="390" x="1190" y="1100" as="geometry" />
+        </mxCell>
+        <mxCell id="export" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DCECF7;strokeColor=#2F6690;fontColor=#17324D;fontSize=16;fontStyle=1;arcSize=14;" value="FHIR export prepared&lt;br&gt;&lt;font style=&quot;font-size:12px&quot;&gt;HL7 FHIR R4 bundle validated&lt;/font&gt;" vertex="1">
+          <mxGeometry height="70" width="390" x="140" y="1230" as="geometry" />
+        </mxCell>
+        <mxCell id="sessionEnded" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F1F8;strokeColor=#2F6690;fontColor=#17324D;fontSize=16;fontStyle=1;arcSize=14;" value="Session ended&lt;br&gt;&lt;font style=&quot;font-size:12px&quot;&gt;Access token revoked or expired&lt;/font&gt;" vertex="1">
+          <mxGeometry height="70" width="390" x="685" y="1490" as="geometry" />
+        </mxCell>
+        <mxCell id="finalOuter" parent="1" style="ellipse;aspect=fixed;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#17324D;strokeWidth=3;" value="" vertex="1">
+          <mxGeometry height="84" width="84" x="837" y="1600" as="geometry" />
+        </mxCell>
+        <mxCell id="finalDot" parent="1" style="ellipse;aspect=fixed;whiteSpace=wrap;html=1;fillColor=#17324D;strokeColor=#17324D;" value="" vertex="1">
+          <mxGeometry height="36" width="36" x="861" y="1624" as="geometry" />
+        </mxCell>
+        <mxCell id="endLabel" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#52606D;align=center;verticalAlign=middle;" value="Final state" vertex="1">
+          <mxGeometry height="25" width="180" x="790" y="1688" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="initial" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#17324D;strokeWidth=2;endArrow=block;" target="unauthenticated" value="application opened">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="unauthenticated" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2F6690;strokeWidth=2;endArrow=block;" target="authenticated" value="valid credentials / issue token">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="authenticated" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2F6690;strokeWidth=2;endArrow=block;" target="profile" value="select patient or dependent profile">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="profile" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2F6690;strokeWidth=2;endArrow=block;" target="upload" value="upload document">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="upload" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#B84A62;strokeWidth=2;endArrow=block;" target="rejected" value="[type, size, and malware checks fail] / notify user">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="rejected" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#B84A62;strokeWidth=2;endArrow=block;" target="upload" value="correct file and retry">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="335" y="545" />
+              <mxPoint x="880" y="545" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="upload" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#4C956C;strokeWidth=2;endArrow=block;" target="processing" value="[checks pass] / create processing job">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="processing" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#B84A62;strokeWidth=2;endArrow=block;" target="failed" value="[service or parser error] / retain source and log event">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" edge="1" parent="1" source="failed" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#B84A62;strokeWidth=2;endArrow=block;" target="processing" value="retry processing">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="335" y="675" />
+              <mxPoint x="880" y="675" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e10" edge="1" parent="1" source="processing" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#805AA5;strokeWidth=2;endArrow=block;" target="review" value="extraction complete">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e11" edge="1" parent="1" source="review" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#D99A2B;strokeWidth=2;endArrow=block;" target="needsVerification" value="[confidence low or provenance incomplete]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e12" edge="1" parent="1" source="needsVerification" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#D99A2B;strokeWidth=2;endArrow=block;" target="verified" value="user verifies or corrects value / attach evidence">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e13" edge="1" parent="1" source="review" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#4C956C;strokeWidth=2;endArrow=block;" target="verified" value="[confidence sufficient and provenance complete] / persist record">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e14" edge="1" parent="1" source="verified" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2F6690;strokeWidth=2;endArrow=block;" target="timeline" value="open timeline">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e15" edge="1" parent="1" source="timeline" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#805AA5;strokeWidth=2;endArrow=block;" target="safety" value="run medication safety check">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e18" edge="1" parent="1" source="verified" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2F6690;strokeWidth=2;endArrow=block;" target="offline" value="refresh emergency data">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e20" edge="1" parent="1" source="timeline" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#17324D;strokeWidth=2;endArrow=block;" target="sessionEnded" value="logout, token expiry, or revoke access">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e21" edge="1" parent="1" source="alert" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#17324D;strokeWidth=2;endArrow=block;" target="sessionEnded" value="logout">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1385" y="1460" />
+              <mxPoint x="880" y="1460" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e22" edge="1" parent="1" source="sessionEnded" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#17324D;strokeWidth=2;endArrow=block;" target="finalOuter" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="legend" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#94A3B8;fontColor=#334155;fontSize=13;arcSize=10;" value="UML notation&lt;br&gt;&lt;font style=&quot;font-size:12px&quot;&gt;Filled circle = initial pseudostate • rounded rectangle = state • circle with dot = final state&lt;/font&gt;" vertex="1">
+          <mxGeometry height="55" width="960" x="420" y="1760" as="geometry" />
+        </mxCell>
+        <mxCell id="noAlert" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6F4EC;strokeColor=#4C956C;fontColor=#183B29;fontSize=16;fontStyle=1;arcSize=14;" value="No safety alert&lt;br&gt;&lt;font style=&quot;font-size:12px&quot;&gt;Rules completed without detected conflict&lt;/font&gt;" vertex="1">
+          <mxGeometry height="70" width="390" x="1190" y="1360" as="geometry" />
+        </mxCell>
+        <mxCell id="e17" edge="1" parent="1" source="safety" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#4C956C;strokeWidth=2;endArrow=block;" target="noAlert" value="[no risk detected]">
+          <mxGeometry relative="1" x="0.5789" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="alert" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3D6;strokeColor=#D99A2B;fontColor=#5D430E;fontSize=16;fontStyle=1;arcSize=14;" value="Safety alert presented&lt;br&gt;&lt;font style=&quot;font-size:12px&quot;&gt;Explain conflict; informational, not prescribing&lt;/font&gt;" vertex="1">
+          <mxGeometry height="70" width="390" x="1190" y="1230" as="geometry" />
+        </mxCell>
+        <mxCell id="e16" edge="1" parent="1" source="safety" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#D99A2B;strokeWidth=2;endArrow=block;" target="alert" value="[risk detected] / explain mechanism">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e19" edge="1" parent="1" source="verified" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2F6690;strokeWidth=2;endArrow=block;" target="export" value="request FHIR export">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="offline" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DCECF7;strokeColor=#2F6690;fontColor=#17324D;fontSize=16;fontStyle=1;arcSize=14;" value="Emergency cache refreshed&lt;br&gt;&lt;font style=&quot;font-size:12px&quot;&gt;Minimum encrypted ICE fields available offline&lt;/font&gt;" vertex="1">
+          <mxGeometry height="70" width="390" x="140" y="1100" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
